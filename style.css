@@ -7,8 +7,8 @@
 body {
     background-color: #eaeaea;
     background-image: url('images/bg2.jpg');
-    background-size: cover;
-    background-position: center center;
+    background-size: auto;
+    background-repeat: repeat;
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;

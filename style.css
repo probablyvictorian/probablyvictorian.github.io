@@ -9,7 +9,6 @@ body {
     background-image: url('images/bg2.jpg');
     background-size: auto;
     background-repeat: repeat;
-    background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
     display: flex;

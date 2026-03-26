@@ -56,12 +56,11 @@ fetch(`images/${randomLogo}`)
         
         pattern.setAttribute('id', 'logo-pattern');
         pattern.setAttribute('patternUnits', 'userSpaceOnUse');
-        pattern.setAttribute('width', '500');
-        pattern.setAttribute('height', '500');
+        pattern.setAttribute('width', '100%');
+        pattern.setAttribute('height', '100%');
         
         image.setAttribute('href', `images/${randomTexture}`);
-        image.setAttribute('width', '500');
-        image.setAttribute('height', '500');
+        image.setAttribute('preserveAspectRatio', 'xMidYMid slice');
         
         pattern.appendChild(image);
         defs.appendChild(pattern);

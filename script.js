@@ -39,9 +39,18 @@ fetch(`images/${randomLogo}`)
         const logoContainer = document.querySelector('.logo-container');
         logoContainer.innerHTML = svgContent;
         
-        // Добавляем паттерн текстуры
+        // Находим SVG
         const svg = logoContainer.querySelector('svg');
-        const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+        
+        // Удаляем встроенные стили из SVG
+        const styleTag = svg.querySelector('style');
+        if (styleTag) {
+            styleTag.remove();
+        }
+        
+        // Добавляем паттерн текстуры
+        const defs = svg.querySelector('defs') || document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+        
         const pattern = document.createElementNS('http://www.w3.org/2000/svg', 'pattern');
         const image = document.createElementNS('http://www.w3.org/2000/svg', 'image');
         
@@ -56,11 +65,15 @@ fetch(`images/${randomLogo}`)
         
         pattern.appendChild(image);
         defs.appendChild(pattern);
-        svg.insertBefore(defs, svg.firstChild);
+        
+        if (!svg.querySelector('defs')) {
+            svg.insertBefore(defs, svg.firstChild);
+        }
         
         // Применяем паттерн ко всем элементам SVG
-        const paths = svg.querySelectorAll('path, rect, circle, polygon, text');
-        paths.forEach(path => {
-            path.setAttribute('fill', 'url(#logo-pattern)');
+        const paths = svg.querySelectorAll('path, rect, circle, polygon, text, g');
+        paths.forEach(el => {
+            el.removeAttribute('class');
+            el.setAttribute('fill', 'url(#logo-pattern)');
         });
     });

@@ -14,11 +14,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-image 0.3s ease;
-}
-
-body.inverted {
-    background-image: url('images/bg02.gif');
+    transition: background-image 0.5s ease;
 }
 
 .logo-container {
@@ -26,8 +22,10 @@ body.inverted {
     max-width: 1400px;
 }
 
-.logo {
+#logo {
     width: 100%;
     height: auto;
     display: block;
+    fill: #000000;
+    transition: fill 0.5s ease;
 }

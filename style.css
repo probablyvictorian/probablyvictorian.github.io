@@ -6,7 +6,7 @@
 
 body {
     background-color: #f5f0e6;
-    background-image: url('images/bg01.gif');
+    background-image: url('images/bg02.gif');
     background-size: auto;
     background-repeat: repeat;
     background-position: center center;
@@ -18,7 +18,7 @@ body {
 }
 
 body.inverted {
-    background-image: url('images/bg02.gif');
+    background-image: url('images/bg01.gif');
 }
 
 .logo-container {

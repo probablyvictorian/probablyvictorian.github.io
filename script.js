@@ -1,22 +1,9 @@
-const backgrounds = [
-    'bg01.gif', 'bg02.gif'
-];
+const logo = document.querySelector('.logo');
 
-const colors = [
-    '#eaeaea', '#f5f0e6', '#e8e4dc', '#f0ebe1'
-];
+logo.addEventListener('mouseenter', function() {
+    document.body.classList.add('inverted');
+});
 
-// Функция случайного выбора
-function random(array) {
-    return array[Math.floor(Math.random() * array.length)];
-}
-
-// Случайно выбираем фон и цвет
-const randomBg = random(backgrounds);
-const randomColor = random(colors);
-
-// Применяем цвет фона
-document.body.style.backgroundColor = randomColor;
-
-// Применяем фон страницы
-document.body.style.backgroundImage = `url('images/${randomBg}')`;
+logo.addEventListener('mouseleave', function() {
+    document.body.classList.remove('inverted');
+});

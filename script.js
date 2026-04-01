@@ -1,5 +1,5 @@
 const backgrounds = [
-    '26bg01.jpg', '26bg02.jpg'
+    'bg01.gif', 'bg02.gif'
 ];
 
 const colors = [

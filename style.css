@@ -5,8 +5,8 @@
 }
 
 body {
-    background-color: #f5f0e6;
-    background-image: url('images/bg02.gif');
+    background-color: #e9e9e9;
+    background-image: url('images/bg01.gif');
     background-size: auto;
     background-repeat: repeat;
     background-position: center center;
@@ -14,11 +14,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-image 0.5s ease;
-}
-
-body.inverted {
-    background-image: url('images/bg01.gif');
 }
 
 .logo-container {
@@ -26,19 +21,20 @@ body.inverted {
     max-width: 1400px;
 }
 
-#logo {
+.logo {
     width: 100%;
-    height: auto;
-    display: block;
-}
-
-#logo path,
-#logo rect {
-    fill: url(#pattern-light);
-    transition: fill 0.5s ease;
-}
-
-body.inverted #logo path,
-body.inverted #logo rect {
-    fill: url(#pattern-dark);
+    height: 0;
+    padding-bottom: 52.6%;
+    background-color: #333;
+    background-image: url('images/bg02.gif');
+    background-size: auto;
+    background-repeat: repeat;
+    -webkit-mask-image: url('images/lg01.svg');
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-image: url('images/lg01.svg');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
 }

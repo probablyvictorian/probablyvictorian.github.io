@@ -17,14 +17,24 @@ body {
 }
 
 .logo-container {
-    width: 70%;
+    width: 40%;
     max-width: 1400px;
+    max-height: 90vh;
 }
 
 .logo {
     width: 100%;
-    height: auto;
-    display: block;
-    max-height: 100vh;
-    object-fit: contain;
+    aspect-ratio: 2692.91 / 1417.32;
+    max-height: 90vh;
+    background-image: url('images/bg02.gif');
+    background-size: auto;
+    background-repeat: repeat;
+    -webkit-mask-image: url('images/lg01.svg');
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-image: url('images/lg01.svg');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
 }

@@ -1,9 +1,10 @@
-const logo = document.querySelector('.logo');
+const logo = document.querySelector('#logo');
+const body = document.body;
 
 logo.addEventListener('mouseenter', function() {
-    document.body.classList.add('inverted');
+    body.style.backgroundImage = "url('images/bg02.gif')";
 });
 
 logo.addEventListener('mouseleave', function() {
-    document.body.classList.remove('inverted');
+    body.style.backgroundImage = "url('images/bg01.gif')";
 });

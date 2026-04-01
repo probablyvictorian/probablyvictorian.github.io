@@ -17,6 +17,10 @@ body {
     transition: background-image 0.5s ease;
 }
 
+body.inverted {
+    background-image: url('images/bg02.gif');
+}
+
 .logo-container {
     width: 90%;
     max-width: 1400px;
@@ -26,6 +30,15 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    fill: #000000;
+}
+
+#logo path,
+#logo rect {
+    fill: url(#pattern-light);
     transition: fill 0.5s ease;
+}
+
+body.inverted #logo path,
+body.inverted #logo rect {
+    fill: url(#pattern-dark);
 }
